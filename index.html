@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Innoma.vc — Акселератор технологического IT-бизнеса</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./src/output.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <script>
     tailwind.config = {
@@ -28,3 +29,41 @@
   </script>
 </head>
 <body class="bg-brand-bg text-slate-800 font-sans antialiased selection:bg-brand-teal selection:text-white">
+
+  <header class="bg-slate-900/95 backdrop-blur top-0 z-50 border-b border-slate-800 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <p  class="flex items-center space-x-2 group">
+        <span class="text-2xl font-black tracking-widest text-brand-teal group-hover:text-white transition">INNOMA<span class="text-white">.VC</span></span>
+      </p>
+
+      <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+        <p  class="hover:text-brand-teal transition-colors py-2">Кто мы?</p>
+        <p  class="hover:text-brand-teal transition-colors py-2">Услуги</p>
+
+        <p href="" class="hover:text-brand-teal transition-colors py-2">Акселератор</p>
+        <p href="" class="hover:text-brand-teal transition-colors py-2">Программа</p>
+
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <p  class="hidden sm:inline-flex bg-brand-teal hover:bg-brand-teal-dark text-white font-semibold text-sm px-5 py-2.5 rounded-xl shadow-lg shadow-brand-teal/20 transition-all transform hover:-translate-y-0.5">
+          Войти
+        </p>
+        <button id="mobile-menu-toggle" type="button" class="lg:hidden text-2xl text-slate-300 hover:text-white p-2 rounded-lg focus:outline-none">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+      <p  class="block py-2 text-slate-300 hover:text-brand-teal text-base font-medium">Кто мы?</p>
+      <p  class="block py-2 text-slate-300 hover:text-brand-teal text-base font-medium">Услуги</p>
+      <p  class="block py-2 text-slate-300 hover:text-brand-teal text-base font-medium">Рынки</p>
+      <p  class="block py-2 text-slate-300 hover:text-brand-teal text-base font-medium">Акселератор</p>
+      <p  class="block py-2 text-slate-300 hover:text-brand-teal text-base font-medium">Программа</p>
+      <p  class="block py-2 text-slate-300 hover:text-brand-teal text-base font-medium">Стоимость</p>
+      <p  class="block py-2 text-slate-300 hover:text-brand-teal text-base font-medium">Эксперты</p>
+      <p  class="block py-2 text-slate-300 hover:text-brand-teal text-base font-medium">Мероприятия</p>
+      <p  class="block w-full text-center bg-brand-teal text-white font-semibold py-3 rounded-xl">Войти / Заявка</p>
+    </div>
+  
