@@ -12,11 +12,13 @@
     --color-slate-500: oklch(55.4% 0.046 257.417);
     --color-slate-800: oklch(27.9% 0.041 260.031);
     --color-slate-900: oklch(20.8% 0.042 265.755);
+    --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-xl: 36rem;
     --container-3xl: 48rem;
+    --container-6xl: 72rem;
     --container-7xl: 80rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
@@ -35,10 +37,12 @@
     --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
+    --font-weight-bold: 700;
     --font-weight-black: 900;
     --tracking-tight: -0.025em;
     --tracking-widest: 0.1em;
     --leading-tight: 1.25;
+    --leading-relaxed: 1.625;
     --radius-sm: 0.25rem;
     --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
@@ -224,8 +228,14 @@
   .my-1 {
     margin-block: var(--spacing);
   }
+  .mt-20 {
+    margin-top: calc(var(--spacing) * 20);
+  }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
+  }
+  .mb-6 {
+    margin-bottom: calc(var(--spacing) * 6);
   }
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
@@ -245,11 +255,20 @@
   .table {
     display: table;
   }
+  .h-12 {
+    height: calc(var(--spacing) * 12);
+  }
   .h-20 {
     height: calc(var(--spacing) * 20);
   }
+  .h-auto {
+    height: auto;
+  }
   .min-h-\[600px\] {
     min-height: 600px;
+  }
+  .w-\[200px\] {
+    width: 200px;
   }
   .w-full {
     width: 100%;
@@ -257,11 +276,20 @@
   .max-w-3xl {
     max-width: var(--container-3xl);
   }
+  .max-w-6xl {
+    max-width: var(--container-6xl);
+  }
   .max-w-7xl {
     max-width: var(--container-7xl);
   }
+  .max-w-full {
+    max-width: 100%;
+  }
   .max-w-xl {
     max-width: var(--container-xl);
+  }
+  .flex-1 {
+    flex: 1;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -272,14 +300,23 @@
   .resize {
     resize: both;
   }
+  .flex-col {
+    flex-direction: column;
+  }
   .items-center {
     align-items: center;
   }
   .justify-between {
     justify-content: space-between;
   }
+  .justify-center {
+    justify-content: center;
+  }
   .justify-start {
     justify-content: flex-start;
+  }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
   }
   :where(.space-y-3 > :not(:last-child)) {
     --tw-space-y-reverse: 0;
@@ -326,6 +363,9 @@
   }
   .border-slate-800 {
     border-color: var(--color-slate-800);
+  }
+  .bg-\[\#00AF91\] {
+    background-color: #00AF91;
   }
   .bg-\[\#00B29A\] {
     background-color: #00B29A;
@@ -392,8 +432,14 @@
   .bg-center {
     background-position: center;
   }
+  .object-contain {
+    object-fit: contain;
+  }
   .p-2 {
     padding: calc(var(--spacing) * 2);
+  }
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
   }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
@@ -455,6 +501,10 @@
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
   }
+  .leading-relaxed {
+    --tw-leading: var(--leading-relaxed);
+    line-height: var(--leading-relaxed);
+  }
   .leading-tight {
     --tw-leading: var(--leading-tight);
     line-height: var(--leading-tight);
@@ -462,6 +512,10 @@
   .font-black {
     --tw-font-weight: var(--font-weight-black);
     font-weight: var(--font-weight-black);
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
   }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
@@ -482,6 +536,12 @@
   .tracking-widest {
     --tw-tracking: var(--tracking-widest);
     letter-spacing: var(--tracking-widest);
+  }
+  .text-\[\#1A53A2\] {
+    color: #1A53A2;
+  }
+  .text-gray-700 {
+    color: var(--color-gray-700);
   }
   .text-slate-300 {
     color: var(--color-slate-300);
@@ -564,6 +624,9 @@
     .hover\:bg-\[\#3aa3c7\]:hover {
       background-color: #3aa3c7;
     }
+    .hover\:bg-\[\#008f76\]:hover {
+      background-color: #008f76;
+    }
     .hover\:text-white:hover {
       color: var(--color-white);
     }
@@ -586,6 +649,11 @@
     .sm\:text-lg {
       font-size: var(--text-lg);
       line-height: var(--tw-leading, var(--text-lg--line-height));
+    }
+  }
+  @media (width >= 48rem) {
+    .md\:flex-row {
+      flex-direction: row;
     }
   }
   @media (width >= 64rem) {
